@@ -24,8 +24,8 @@ public class App
 //      recipientAddress[counter] = new InternetAddress(recipient1.trim());
 //      counter++;
 //  }
-	 final String username = "2001mdsulthan@gmail.com";
-        final String password = "9884621812";
+	 final String username = "enter_senter_email_id";
+        final String password = "**********";
         Session session;
         public void authentication()
         {
@@ -48,33 +48,10 @@ public class App
         try {
 
             Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("2001mdsulthan@gmail.com"));
+            message.setFrom(new InternetAddress("enter_senter_email_id"));
             message.setRecipient(Message.RecipientType.TO,new InternetAddress(to));
             message.setSubject("bulk email send:");
-            
-
-            
-            BodyPart messagepart=new MimeBodyPart();
-            messagepart.setText("mail part");
-            
-            MimeBodyPart attachment=new MimeBodyPart();
-            
-            try{attachment.attachFile("");}
-            catch(Exception b)
-            {
-            	b.printStackTrace();
-            }
-            Multipart multi=new MimeMultipart();
-            multi.addBodyPart(messagepart);
-            multi.addBodyPart(attachment);
-            
-            
-           
-            
-            message.setContent(multi);
-          
-            
-            message.setContent(multi);
+	    message.setText("hello this is sulthan:.");
             
             Transport.send(message);
 
@@ -90,6 +67,7 @@ public class App
 
 }
     
+
 
 
 
