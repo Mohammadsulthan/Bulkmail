@@ -13,7 +13,7 @@ public class secondApp
     App n1=new App();
     //1.step created a String and store a recipient email address
     n1.authentication();
-    String emailList="2001mdsulthan@gmail.com";
+    String emailList="resipient_email_address_with_coma_adding";
  
 	Set<String> nn=new TreeSet<String>();
 	
